@@ -29,4 +29,9 @@ class ConverterViewController: BaseViewController {
                 self.tableView.reloadData()
             }).addDisposableTo(self.disposeBag)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = "Converter"
+    }
 }
