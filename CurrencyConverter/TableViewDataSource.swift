@@ -50,4 +50,8 @@ class TableViewDataSource: NSObject, RxTableViewDataSourceType, UITableViewDeleg
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.viewModel?.cellType(atIndexPath: indexPath).estimatedHeight() ?? 0
     }
+    
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return self.viewModel?.shouldHighLight(indexPath: indexPath) ?? false
+    }
 }

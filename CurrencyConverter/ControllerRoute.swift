@@ -10,7 +10,7 @@ import UIKit
 import JLRoutes
 
 enum ControllerRoutePath : String {
-    case Detail = ""
+    case ConverterViewController = "converterViewControllerId"
 }
 
 enum RouteMode: String {
@@ -19,7 +19,7 @@ enum RouteMode: String {
 
 class ControllerRoute: NSObject {
     static func configure() {
-        
+        addRoute(path: .ConverterViewController)
     }
     
     static func storyBoard() -> UIStoryboard {

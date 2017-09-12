@@ -10,6 +10,5 @@ import UIKit
 import RxSwift
 class BaseViewModel: NSObject {
     let error : Variable<Error?> = Variable(nil)
-    var routingSubject : Variable<Any?> = Variable(nil)
     let disposeBag = DisposeBag()
 }

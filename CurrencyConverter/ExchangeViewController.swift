@@ -26,6 +26,13 @@ class ExchangeViewController: BaseViewController {
             .subscribe(onNext: { (exchange) in
                 self.tableView.reloadData()
             }).addDisposableTo(self.disposeBag)
+        self.tableView.rx.itemSelected
+            .subscribe(onNext: {[weak self] indexPath in
+                self?.tableView.deselectRow(at: indexPath, animated: false)
+                let rate = self?.viewModel.model(atIndex: indexPath) as? Rate
+                rate?.base = Constant.currencies[self?.viewModel.selectedCurrencyIndex ?? 0]
+                ControllerRoute.route(path: .ConverterViewController, sender: self!, parameters: rate)
+            }).addDisposableTo(self.disposeBag)
         self.viewModel.selectedCurrencyIndex = 0
     }
 }

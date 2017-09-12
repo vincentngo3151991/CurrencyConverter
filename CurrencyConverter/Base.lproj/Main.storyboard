@@ -59,5 +59,38 @@
             </objects>
             <point key="canvasLocation" x="407" y="134"/>
         </scene>
+        <!--Converter View Controller-->
+        <scene sceneID="gWO-Ha-D96">
+            <objects>
+                <viewController storyboardIdentifier="converterViewControllerId" automaticallyAdjustsScrollViewInsets="NO" id="SzD-bP-hau" customClass="ConverterViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fCd-Xa-s2S"/>
+                        <viewControllerLayoutGuide type="bottom" id="XEr-1I-NW1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yeU-Zj-Q1b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lHy-5s-4Rm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.56470588239999997" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lHy-5s-4Rm" firstAttribute="leading" secondItem="yeU-Zj-Q1b" secondAttribute="leading" id="17f-7x-EPJ"/>
+                            <constraint firstItem="lHy-5s-4Rm" firstAttribute="top" secondItem="fCd-Xa-s2S" secondAttribute="bottom" id="H9S-vB-QeO"/>
+                            <constraint firstAttribute="trailing" secondItem="lHy-5s-4Rm" secondAttribute="trailing" id="n5c-Ne-yLk"/>
+                            <constraint firstItem="XEr-1I-NW1" firstAttribute="top" secondItem="lHy-5s-4Rm" secondAttribute="bottom" id="nOe-Dg-xZw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="lHy-5s-4Rm" id="uBu-Y4-8Fk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOQ-Gm-lst" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="134"/>
+        </scene>
     </scenes>
 </document>

@@ -11,6 +11,7 @@ import ObjectMapper
 class Rate: BaseModel {
     var name : String = ""
     var value : Double = 0
+    var base : String = ""
     
     override func mapping(map: Map) {
         super.mapping(map: map)

@@ -16,7 +16,7 @@ class ExchangeViewModel: BaseTableViewModel {
                         .subscribe(onSuccess: { (exchange) in
                             self.exchange.value = exchange
                         }) { (error) in
-                            //Skip for now
+                            self.error.value = error
             }.addDisposableTo(self.disposeBag)
         }
     }
@@ -39,5 +39,9 @@ class ExchangeViewModel: BaseTableViewModel {
         } else {
             return ConvertedCurrencyCell.self
         }
+    }
+    
+    override func shouldHighLight(indexPath: IndexPath) -> Bool {
+        return indexPath.section == 0 ? false : true
     }
 }

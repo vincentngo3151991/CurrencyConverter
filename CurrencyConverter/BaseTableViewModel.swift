@@ -24,4 +24,8 @@ class BaseTableViewModel: BaseViewModel {
     func cellType(atIndexPath: IndexPath) -> BaseTableViewCell.Type {
         return BaseTableViewCell.self
     }
+    
+    func shouldHighLight(indexPath: IndexPath) -> Bool {
+        return false
+    }
 }
