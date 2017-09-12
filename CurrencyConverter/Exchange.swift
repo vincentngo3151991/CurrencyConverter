@@ -20,7 +20,7 @@ class Exchange: BaseModel {
         self.date <- map["date"]
         //parsing rates
         for (name, value) in map.JSON["rates"] as! [String: Double] {
-            self.rates.append(Rate(JSONString: "\"name\":\(name),\"value\":\(value)"))
+            self.rates.append(Rate(JSONString: "{\"name\":\"\(name)\",\"value\":\(value)}"))
         }
     }
 }

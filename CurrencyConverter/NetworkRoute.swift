@@ -9,6 +9,6 @@
 import UIKit
 
 struct NetworkRoute {
-    static let baseUrl = "http://api.fixer.io/"
+    static let baseUrl = "https://api.fixer.io/"
     static let latestCurrency = baseUrl + "latest"
 }

@@ -17,7 +17,7 @@ class NetworkRequest: NSObject {
         return Single<T?>.create(subscribe: { single -> Disposable in
             let request = Alamofire.request(url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!, method: method, parameters: parameters)
                 .responseObject(completionHandler: { (response:DataResponse<T>) in
-                    if (response.result.isFailure) {
+                    if (response.result.isSuccess) {
                        single(.success(response.result.value!))
                     } else {
                         single(.error(response.result.error!))

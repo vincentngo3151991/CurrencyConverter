@@ -22,7 +22,7 @@ class BaseTableViewCell: UITableViewCell {
     }
     
     class func height() -> CGFloat {
-        return 0
+        return UITableViewAutomaticDimension
     }
     
     class func estimatedHeight() ->CGFloat {
